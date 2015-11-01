@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
-  <colour>5066061</colour>
+  <colour>1973790</colour>
   <showcolour>-1</showcolour>
   <code></code>
   <enableViews>0</enableViews>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>1</page>
-    <xoffset>-132</xoffset>
-    <yoffset>-56</yoffset>
+    <page>3</page>
+    <xoffset>-96</xoffset>
+    <yoffset>-36</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -55,10 +55,7 @@
     <instance objName="obj_Boundary" x="0" y="0" name="inst_07F7C557" locked="0" code="" scaleX="5" scaleY="1.75" colour="4294967295" rotation="0"/>
     <instance objName="obj_Boundary" x="0" y="56" name="inst_847AA501" locked="0" code="" scaleX="0.5" scaleY="11" colour="4294967295" rotation="0"/>
     <instance objName="obj_Boundary" x="576" y="56" name="inst_38957634" locked="0" code="" scaleX="0.5" scaleY="11" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Pixel" x="168" y="96" name="inst_F53B074D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Pixel" x="304" y="88" name="inst_3E2BAF0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Pixel" x="472" y="112" name="inst_A4A3AAA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Engine" x="0" y="0" name="inst_26FE602B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Engine" x="0" y="0" name="inst_7FB58D92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
