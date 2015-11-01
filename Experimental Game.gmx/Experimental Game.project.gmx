@@ -9,6 +9,26 @@
     <sprite>sprites\spr_Pixel</sprite>
     <sprite>sprites\spr_Boundaries</sprite>
     <sprite>sprites\spr_TestSprite</sprite>
+    <sprite>sprites\spr_Pixel_1</sprite>
+    <sprite>sprites\spr_Pixel_2</sprite>
+    <sprite>sprites\spr_Pixel_3</sprite>
+    <sprite>sprites\spr_Pixel_4</sprite>
+    <sprite>sprites\spr_Pixel_5</sprite>
+    <sprite>sprites\spr_Pixel_6</sprite>
+    <sprite>sprites\spr_Pixel_7</sprite>
+    <sprite>sprites\spr_Pixel_8</sprite>
+    <sprite>sprites\spr_Pixel_9</sprite>
+    <sprite>sprites\spr_Pixel_10</sprite>
+    <sprite>sprites\spr_Pixel_11</sprite>
+    <sprite>sprites\spr_Pixel_12</sprite>
+    <sprite>sprites\spr_Pixel_13</sprite>
+    <sprite>sprites\spr_Pixel_14</sprite>
+    <sprite>sprites\spr_Pixel_15</sprite>
+    <sprite>sprites\spr_Pixel_16</sprite>
+    <sprite>sprites\spr_Pixel_17</sprite>
+    <sprite>sprites\spr_Pixel_18</sprite>
+    <sprite>sprites\spr_Pixel_19</sprite>
+    <sprite>sprites\spr_Pixel_20</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_Main</background>
