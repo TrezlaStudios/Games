@@ -6,12 +6,18 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_BG</sprite>
+    <sprite>sprites\spr_Pixel</sprite>
+    <sprite>sprites\spr_Boundaries</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_Main</background>
   </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\obj_Pixel</object>
+    <object>objects\obj_Boundary</object>
+    <object>objects\obj_Engine</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\room_Game</room>
   </rooms>
