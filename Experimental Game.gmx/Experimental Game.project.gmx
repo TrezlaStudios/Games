@@ -7,17 +7,23 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_Pixel</sprite>
+    <sprite>sprites\spr_Pixel_Glow</sprite>
     <sprite>sprites\spr_Boundaries</sprite>
-    <sprite>sprites\spr_TestSprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_Main</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\init_Pixels.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_Default</font>
+  </fonts>
   <objects name="objects">
+    <object>objects\obj_Engine</object>
     <object>objects\obj_Pixel</object>
     <object>objects\obj_Boundary</object>
-    <object>objects\obj_Engine</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_Game</room>
