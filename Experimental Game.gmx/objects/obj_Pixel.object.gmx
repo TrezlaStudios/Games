@@ -96,6 +96,16 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>/// Allowing Collision
+
+if (Pixel[other.ID,0] == Pixel[ID,0]) {
+    if (ID &lt; array_height_2d(Pixel)-1) {
+        if (id &lt; other.id) {
+            ID += 1;
+        } else {
+            instance_destroy();
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -118,8 +128,8 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_Pixel_Glow,0,x,y,image_xscale,image_yscale,image_angle,Pixel[ID,0],1);
-draw_sprite_ext(Pixel[ID,2],0,x,y,image_xscale,image_yscale,image_angle,Pixel[ID,0],1);
+            <string>draw_sprite_ext(spr_Pixel_Glow,image_index,x,y,image_xscale,image_yscale,image_angle,Pixel[ID,0],1);
+draw_sprite_ext(Pixel[ID,2],image_index,x,y,image_xscale,image_yscale,image_angle,Pixel[ID,0],1);
 </string>
           </argument>
         </arguments>

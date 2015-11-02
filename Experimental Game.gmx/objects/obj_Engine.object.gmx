@@ -77,6 +77,7 @@ if (mouse_check_button_pressed(mb_left)) {
     if (!instance_position(mouse_x,mouse_y,obj_Boundary)) {
         var px = instance_create(mouse_x,mouse_y,obj_Pixel);
         px.ID = Pixel_Index;
+        px.image_speed = Pixel[Pixel_Index,3];
     }
 }
 </string>
@@ -100,7 +101,7 @@ if (mouse_check_button_pressed(mb_left)) {
           <argument>
             <kind>1</kind>
             <string>/// Change Pixels
-if (mouse_wheel_down()) {
+/*if (mouse_wheel_down()) {
     if (Pixel_Index &lt; array_height_2d(Pixel)-1) {
         Pixel_Index += 1;
     } else {
@@ -114,7 +115,7 @@ if (mouse_wheel_up()) {
     } else {
         Pixel_Index = array_height_2d(Pixel)-1;
     }
-}
+}*/
 </string>
           </argument>
         </arguments>
@@ -141,7 +142,7 @@ if (mouse_check_button(mb_right)) {
         if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {
             var dir, force;
             dir = point_direction(mouse_x,mouse_y,x,y);
-            force = 5;
+            force = 1;
             physics_apply_impulse(other.x,other.y,lengthdir_x(force/100*(100-point_distance(x,y,mouse_x,mouse_y)),dir),lengthdir_y(force/100*(100-point_distance(x,y,mouse_x,mouse_y)),dir));
         }
     }
