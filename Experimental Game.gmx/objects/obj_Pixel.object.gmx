@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>ID = 0;
+Merge_Capacity = 0;
 </string>
           </argument>
         </arguments>
@@ -100,8 +101,14 @@ instance_destroy();
 if (Pixel[other.ID,0] == Pixel[ID,0]) {
     if (ID &lt; array_height_2d(Pixel)-1) {
         if (id &lt; other.id) {
-            ID += 1;
+            if (Merge_Capacity &lt; Pixel[ID,4]) {
+                Merge_Capacity += 1;
+            } else {
+                ID += 1;
+                Merge_Capacity = 0;
+            }
         } else {
+            other.Merge_Capacity += Merge_Capacity;
             instance_destroy();
         }
     }
