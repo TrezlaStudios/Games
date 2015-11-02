@@ -20,3 +20,8 @@ i = 3;
 Pixel[i,0] = c_yellow; // Colour
 Pixel[i,1] = 0; // Quantity
 Pixel[i,2] = spr_Pixel; // Sprite
+
+i = 4;
+Pixel[i,0] = c_orange; // Colour
+Pixel[i,1] = 0; // Quantity
+Pixel[i,2] = spr_Pixel; // Sprite

@@ -10,6 +10,14 @@
     <sprite>sprites\spr_Boundary_Corner</sprite>
     <sprite>sprites\spr_Pixel</sprite>
     <sprite>sprites\spr_Pixel_Glow</sprite>
+    <sprite>sprites\spr_Pixel_C1</sprite>
+    <sprite>sprites\spr_Pixel_C2</sprite>
+    <sprite>sprites\spr_Pixel_C3</sprite>
+    <sprite>sprites\spr_Pixel_C4</sprite>
+    <sprite>sprites\spr_Pixel_C5</sprite>
+    <sprite>sprites\spr_Pixel_C6</sprite>
+    <sprite>sprites\spr_Pixel_C7</sprite>
+    <sprite>sprites\spr_Pixel_C8</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_Main</background>
