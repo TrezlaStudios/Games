@@ -76,7 +76,7 @@ Pixel_Index = 0;
 if (mouse_check_button_pressed(mb_left)) {
     if (!instance_position(mouse_x,mouse_y,obj_Boundary)) {
         var px = instance_create(mouse_x,mouse_y,obj_Pixel);
-        px.image_blend = Pixel[Pixel_Index,0];
+        px.ID = Pixel_Index;
     }
 }
 </string>
@@ -101,7 +101,7 @@ if (mouse_check_button_pressed(mb_left)) {
             <kind>1</kind>
             <string>/// Change Pixels
 if (mouse_wheel_down()) {
-    if (Pixel_Index &lt; array_height_2d(Pixel)) {
+    if (Pixel_Index &lt; array_height_2d(Pixel)-1) {
         Pixel_Index += 1;
     } else {
         Pixel_Index = 0;
@@ -113,6 +113,37 @@ if (mouse_wheel_up()) {
         Pixel_Index -= 1;
     } else {
         Pixel_Index = array_height_2d(Pixel)-1;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Create Impulse
+if (mouse_check_button(mb_right)) {
+    with (obj_Pixel) {
+        if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {
+            var dir, force;
+            dir = point_direction(mouse_x,mouse_y,x,y);
+            force = 5;
+            physics_apply_impulse(other.x,other.y,lengthdir_x(force/100*(100-point_distance(x,y,mouse_x,mouse_y)),dir),lengthdir_y(force/100*(100-point_distance(x,y,mouse_x,mouse_y)),dir));
+        }
     }
 }
 </string>
@@ -137,11 +168,14 @@ if (mouse_wheel_up()) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_Pixel_Glow,0,x+30,y+30,2,2,45,c_white,1);
-draw_sprite_ext(spr_Pixel,0,x+30,y+30,2,2,45,c_white,1);
-draw_set_colour(c_white);
+            <string>/// Draw GUI
 draw_set_font(font_Default);
-draw_text(x+38,y+28,"x"+string(instance_number(obj_Pixel)));
+for (var i=0; i&lt;array_height_2d(Pixel); i++) {
+    draw_sprite_ext(spr_Pixel_Glow,0,x+30+(70*i),y+30,2,2,45,Pixel[i,0],1);
+    draw_sprite_ext(Pixel[i,2],0,x+30+(70*i),y+30,2,2,45,Pixel[i,0],1);
+    draw_set_colour(Pixel[i,0]);
+    draw_text(x+38+(70*i),y+28,"x"+string(Pixel[i,1]));
+}
 </string>
           </argument>
         </arguments>
