@@ -50,6 +50,9 @@
             <kind>1</kind>
             <string>if (instance_position(mouse_x, mouse_y, id)) {
     image_index = 1;
+    if (mouse_check_button_pressed(mb_left)) {
+        Data_Save();
+    }
 } else {
     image_index = 0;
 }

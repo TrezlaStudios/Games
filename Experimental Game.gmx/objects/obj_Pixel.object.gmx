@@ -97,7 +97,7 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>/// Allowing Collision
-
+/*
 if (Pixel[other.ID,0] == Pixel[ID,0]) {
     if (ID &lt; array_height_2d(Pixel)-1) {
         if (id &lt; other.id) {
@@ -112,7 +112,7 @@ if (Pixel[other.ID,0] == Pixel[ID,0]) {
             instance_destroy();
         }
     }
-}
+}*/
 </string>
           </argument>
         </arguments>

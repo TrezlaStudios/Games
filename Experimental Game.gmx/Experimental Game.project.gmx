@@ -40,6 +40,7 @@
     <script>scripts\init_Pixels.gml</script>
     <script>scripts\Data_Load.gml</script>
     <script>scripts\Data_Save.gml</script>
+    <script>scripts\Spawn_Pixel.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_Default</font>

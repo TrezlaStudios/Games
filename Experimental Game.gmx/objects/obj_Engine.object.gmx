@@ -51,8 +51,8 @@ init_Pixels();
             <string>/// Init Vars
 globalvar Pixel_Index;
 Pixel_Index = 0;
-globalvar cnt;
-cnt = room_speed;
+
+cnt = room_speed/8;
 Data_Load();
 </string>
           </argument>
@@ -81,10 +81,7 @@ if (mouse_check_button_pressed(mb_left)) {
     if (!instance_position(mouse_x,mouse_y,obj_Boundary)) {
         if (Pixel[Pixel_Index, 1] &gt;= 0) {
             //Pixel[Pixel_Index, 1] -= 1;
-            var px = instance_create(mouse_x-20+irandom(40),mouse_y-20+irandom(40),obj_Pixel);
-            px.ID = Pixel_Index;
-            px.image_speed = Pixel[Pixel_Index,3];
-            px.phy_rotation = random(90);
+            Spawn_Pixel();
         }
     }
 }
@@ -176,20 +173,16 @@ if (mouse_check_button(mb_right)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Automatic spawning
+            <string>///Automatic Spawning
 
-
-if keyboard_check(vk_space)
-{
-if (cnt&gt; 0)
-{
-cnt -= 1;
+if keyboard_check(vk_space) {
+    if (cnt&gt; 0) {
+        cnt -= 1;
+    } else {
+        Spawn_Pixel();
+        cnt = room_speed/8;
+    }
 }
-else
-{
-instance_create (mouse_x,mouse_y,obj_Pixel);
-cnt = room_speed
-}}
 </string>
           </argument>
         </arguments>

@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message("Collected Pixel");
-Data_Save();
+            <string>//Data_Save();
 </string>
           </argument>
         </arguments>
