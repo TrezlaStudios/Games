@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-100</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Init Scripts
+randomize();
 init_Pixels();
 </string>
           </argument>
@@ -50,6 +51,8 @@ init_Pixels();
             <string>/// Init Vars
 globalvar Pixel_Index;
 Pixel_Index = 0;
+
+Data_Load();
 </string>
           </argument>
         </arguments>
@@ -75,9 +78,13 @@ Pixel_Index = 0;
             <string>/// Create Pixels
 if (mouse_check_button_pressed(mb_left)) {
     if (!instance_position(mouse_x,mouse_y,obj_Boundary)) {
-        var px = instance_create(mouse_x,mouse_y,obj_Pixel);
-        px.ID = Pixel_Index;
-        px.image_speed = Pixel[Pixel_Index,3];
+        if (Pixel[Pixel_Index, 1] &gt;= 0) {
+            //Pixel[Pixel_Index, 1] -= 1;
+            var px = instance_create(mouse_x-20+irandom(40),mouse_y-20+irandom(40),obj_Pixel);
+            px.ID = Pixel_Index;
+            px.image_speed = Pixel[Pixel_Index,3];
+            px.phy_rotation = random(90);
+        }
     }
 }
 </string>
@@ -101,7 +108,7 @@ if (mouse_check_button_pressed(mb_left)) {
           <argument>
             <kind>1</kind>
             <string>/// Change Pixels
-/*if (mouse_wheel_down()) {
+if (mouse_wheel_down()) {
     if (Pixel_Index &lt; array_height_2d(Pixel)-1) {
         Pixel_Index += 1;
     } else {
@@ -115,7 +122,7 @@ if (mouse_wheel_up()) {
     } else {
         Pixel_Index = array_height_2d(Pixel)-1;
     }
-}*/
+}
 </string>
           </argument>
         </arguments>
@@ -140,10 +147,11 @@ if (mouse_wheel_up()) {
 if (mouse_check_button(mb_right)) {
     with (obj_Pixel) {
         if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {
-            var dir, force;
+            var dir, force, impulse_distance;
             dir = point_direction(mouse_x,mouse_y,x,y);
-            force = 1;
-            physics_apply_impulse(other.x,other.y,lengthdir_x(force/100*(100-point_distance(x,y,mouse_x,mouse_y)),dir),lengthdir_y(force/100*(100-point_distance(x,y,mouse_x,mouse_y)),dir));
+            force = 0.5;
+            impulse_distance = 50;
+            physics_apply_impulse(other.x,other.y,lengthdir_x(force/impulse_distance*(impulse_distance-point_distance(x,y,mouse_x,mouse_y)),dir),lengthdir_y(force/impulse_distance*(impulse_distance-point_distance(x,y,mouse_x,mouse_y)),dir));
         }
     }
 }
@@ -172,10 +180,10 @@ if (mouse_check_button(mb_right)) {
             <string>/// Draw GUI
 draw_set_font(font_Default);
 for (var i=0; i&lt;array_height_2d(Pixel); i++) {
-    draw_sprite_ext(spr_Pixel_Glow,0,x+30+(70*i),y+30,2,2,45,Pixel[i,0],1);
+    if (Pixel_Index = i) {draw_sprite_ext(spr_Pixel_Glow,0,x+30+(70*i),y+30,2,2,45,Pixel[i,0],1);}
     draw_sprite_ext(Pixel[i,2],0,x+30+(70*i),y+30,2,2,45,Pixel[i,0],1);
     draw_set_colour(Pixel[i,0]);
-    draw_text(x+38+(70*i),y+28,"x"+string(Pixel[i,1]));
+    draw_text(x+38+(70*i),y+30,"x"+string(Pixel[i,1]));
 }
 </string>
           </argument>
