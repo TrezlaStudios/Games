@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_Boundary</sprite>
     <sprite>sprites\spr_Boundary_Corner</sprite>
+    <sprite>sprites\spr_ButtonUpgr</sprite>
     <sprite>sprites\spr_Pixel_Glow</sprite>
     <sprite>sprites\spr_Pixel_C1</sprite>
     <sprite>sprites\spr_Pixel_C2</sprite>
