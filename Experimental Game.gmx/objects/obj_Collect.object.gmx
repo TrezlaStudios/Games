@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Data_Save();
+            <string>if (other.ID &gt;= 1) {
+    Pixel[other.ID-1,1] += other.Merge_Capacity;
+}
+Pixel[other.ID,1] += 1;
+with (other) instance_destroy();
 </string>
           </argument>
         </arguments>

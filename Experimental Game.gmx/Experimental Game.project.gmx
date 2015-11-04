@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_Boundary</sprite>
+    <sprite>sprites\spr_Boundary_Centered</sprite>
     <sprite>sprites\spr_Boundary_Corner</sprite>
     <sprite>sprites\spr_ButtonUpgr</sprite>
     <sprite>sprites\spr_Pixel_Glow</sprite>
@@ -30,17 +31,24 @@
       <sprites name="Icons">
         <sprite>sprites\spr_Icon_Stats</sprite>
       </sprites>
+      <sprite>sprites\spr_GUI_BG</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background">
-    <background>background\bg_Main</background>
-  </backgrounds>
+  <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\init_Pixels.gml</script>
-    <script>scripts\Data_Load.gml</script>
-    <script>scripts\Data_Save.gml</script>
-    <script>scripts\Spawn_Pixel.gml</script>
+    <scripts name="Init">
+      <script>scripts\init_Pixels.gml</script>
+      <script>scripts\init_Upgrades.gml</script>
+      <script>scripts\init_Specialty_Pixels.gml</script>
+    </scripts>
+    <scripts name="Data">
+      <script>scripts\Data_Load.gml</script>
+      <script>scripts\Data_Save.gml</script>
+    </scripts>
+    <scripts name="Functions">
+      <script>scripts\Spawn_Pixel.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_Default</font>
@@ -48,14 +56,20 @@
   <objects name="objects">
     <object>objects\obj_Engine</object>
     <object>objects\obj_Pixel</object>
+    <object>objects\obj_Pixel_Spawner</object>
     <object>objects\obj_Collect</object>
     <objects name="Boundaries">
       <object>objects\obj_Boundary</object>
+      <object>objects\obj_Boundary_Spinner</object>
       <object>objects\obj_Boundary_Corner</object>
     </objects>
     <object>objects\obj_GUI_Left</object>
     <object>objects\obj_GUI_Right</object>
     <object>objects\obj_Btn_Stats</object>
+    <objects name="GUI">
+      <object>objects\obj_GUI_Stats</object>
+      <object>objects\obj_GUI_Stats_Pixel</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_Game</room>
