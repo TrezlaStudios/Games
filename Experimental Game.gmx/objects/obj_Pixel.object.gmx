@@ -112,10 +112,10 @@ draw_sprite_ext(Pixel[ID,2],image_index,x,y,image_xscale,image_yscale,image_angl
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
   <PhysicsObjectDensity>100</PhysicsObjectDensity>
-  <PhysicsObjectRestitution>0.5</PhysicsObjectRestitution>
+  <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.5</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>0.5</PhysicsObjectAngularDamping>
+  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.300000011920929</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.600000023841858</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>

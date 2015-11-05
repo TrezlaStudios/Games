@@ -51,7 +51,13 @@
             <string>if (instance_position(mouse_x, mouse_y, id)) {
     image_index = 1;
     if (mouse_check_button_pressed(mb_left)) {
-        if (!instance_exists(obj_GUI_Stats)) {instance_create(0,32,obj_GUI_Stats);}
+        if (!instance_exists(obj_GUI_Stats)) {
+            instance_create(0,0,obj_GUI_Stats);
+        } else {
+            with (obj_GUI_Stats) {
+                State = 1;
+            }
+        }
         Data_Save();
     }
 } else {

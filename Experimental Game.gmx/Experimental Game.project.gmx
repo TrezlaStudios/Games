@@ -33,6 +33,7 @@
       </sprites>
       <sprite>sprites\spr_GUI_BG</sprite>
     </sprites>
+    <sprite>sprites\sprite21</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

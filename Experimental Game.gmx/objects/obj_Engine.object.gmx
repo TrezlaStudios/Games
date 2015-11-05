@@ -151,11 +151,10 @@ if (mouse_wheel_up()) {
 if (mouse_check_button(mb_right)) {
     with (obj_Pixel) {
         if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {
-            var dir, force, impulse_distance;
+            var dir, impulse_distance;
             dir = point_direction(mouse_x,mouse_y,x,y);
-            force = 2.5;
-            impulse_distance = 50;
-            physics_apply_impulse(other.x,other.y,lengthdir_x(force/impulse_distance*(impulse_distance-point_distance(x,y,mouse_x,mouse_y)),dir),lengthdir_y(force/impulse_distance*(impulse_distance-point_distance(x,y,mouse_x,mouse_y)),dir));
+            impulse_distance = 20;
+            physics_apply_impulse(mouse_x,mouse_y,lengthdir_x(impulse_distance,dir),lengthdir_y(impulse_distance,dir));
         }
     }
 }

@@ -30,6 +30,37 @@ for (var i=0; i&lt;array_height_2d(Pixel); i++) {
     Inst[i] = instance_create(x+30+(70*i),y-30,obj_GUI_Stats_Pixel);
     Inst[i].ID = i;
 }
+
+Height = 40;
+State = 0;
+Scroll_X = 0;
+Clicked_X = -1;
+Scroll_X_Move = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>for (var i=0; i&lt;array_length_1d(Inst); i++) {
+    with (Inst[i]) instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -54,11 +85,60 @@ for (var i=0; i&lt;array_height_2d(Pixel); i++) {
             <kind>1</kind>
             <string>/// Set Position For GUI
 for (var i=0; i&lt;array_height_2d(Pixel); i++) {
-    //Inst[i].x = x+30+(70*i);
-    //Inst[i].y = y-30;
-    Inst[i].x = x+30+(70*i);
-    Inst[i].y = y;
+    Inst[i].x = x+Scroll_X+30+(70*i);
+    Inst[i].y = y-20;
 }
+
+if (State = 0) {
+    if (y &lt; Height) {
+        y += (Height-y)/6;
+    }
+} else {
+    if (y &gt; -1) {
+        y -= (Height-(Height-y))/6;
+        if (y &lt;= 1) {
+            instance_destroy();
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Scroll Stats
+//
+// THIS IS WHAT I GAVE UP ON
+//
+
+/*if (mouse_check_button_pressed(mb_left)) {
+    Clicked_X = mouse_x;
+}
+
+if (mouse_check_button(mb_left)) {
+    Scroll_X = (mouse_x-Clicked_X);
+} else {
+    if (Scroll_X &gt; 0) {
+        Scroll_X -= Scroll_X/6;
+    } else if (Scroll_X &lt; -100) {
+        Scroll_X -= (Scroll_X+100)/6;
+    }
+}*/
 </string>
           </argument>
         </arguments>
