@@ -23,6 +23,8 @@
       <sprite>sprites\spr_Pixel</sprite>
       <sprite>sprites\spr_Pixel_A1</sprite>
       <sprite>sprites\spr_Pixel_A2</sprite>
+      <sprite>sprites\spr_Pixel_A3</sprite>
+      <sprite>sprites\spr_Pixel_A4</sprite>
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\spr_GUI_Main_Left</sprite>
@@ -35,7 +37,9 @@
     </sprites>
     <sprite>sprites\sprite21</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_Sky</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Init">
