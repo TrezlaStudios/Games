@@ -54,7 +54,12 @@ init_Upgrades();
 globalvar Pixel_Index;
 Pixel_Index = 0;
 
+// Temp Vars
+startX = mouse_x;
+startY = mouse_y;
 cnt = room_speed/8;
+
+// Loading Data
 Data_Load();
 </string>
           </argument>
@@ -79,6 +84,7 @@ Data_Load();
           <argument>
             <kind>1</kind>
             <string>/// Create Pixels
+if (!instance_position(mouse_x,mouse_y,obj_Pixel)) {
 if (mouse_check_button_pressed(mb_left)) {
     if (!instance_position(mouse_x,mouse_y,obj_Boundary)) {
         if (Pixel[Pixel_Index, 5] == false) {
@@ -90,6 +96,8 @@ if (mouse_check_button_pressed(mb_left)) {
             Spawn_Pixel();
         }
     }
+}
+
 }
 </string>
           </argument>
@@ -188,6 +196,40 @@ if (keyboard_check(vk_space)) {
             Spawn_Pixel();
             cnt = room_speed/8;
         }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Click &amp; Launch Pixels
+if (instance_position(mouse_x,mouse_y,obj_Pixel)) {
+    if (mouse_check_button_pressed(mb_left)) {
+        startX = mouse_x;
+        startY = mouse_y;
+    }
+}
+
+if (mouse_check_button_released(mb_left)) {
+    with (instance_place(mouse_x, mouse_y, obj_Pixel)) {
+        //phy_rotation = point_direction(startX, startY, mouse_x, mouse_y);
+        physics_apply_local_impulse(startX-x, startY-y, mouse_x-x, mouse_y-y);
     }
 }
 </string>

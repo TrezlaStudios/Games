@@ -75,8 +75,10 @@
       <object>objects\obj_GUI_Stats</object>
       <object>objects\obj_GUI_Stats_Pixel</object>
     </objects>
+    <object>objects\obj_Anim_Pixel</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_Testing</room>
     <room>rooms\room_Game</room>
   </rooms>
   <help>
