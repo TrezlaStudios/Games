@@ -155,14 +155,29 @@ if (mouse_wheel_up()) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Create Impulse
-if (mouse_check_button(mb_right)) {
-    with (obj_Pixel) {
-        if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {
-            var dir, impulse_distance;
-            dir = point_direction(mouse_x,mouse_y,x,y);
-            impulse_distance = 20;
-            physics_apply_impulse(mouse_x,mouse_y,lengthdir_x(impulse_distance,dir),lengthdir_y(impulse_distance,dir));
+            <string>/// Abilities
+
+if (/* ABILITY PUSH */ true) {
+    if (mouse_check_button(mb_right)) {
+        with (obj_Pixel) {
+            if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {
+                var dir, impulse_distance;
+                dir = point_direction(mouse_x,mouse_y,x,y);
+                impulse_distance = 20;
+                physics_apply_impulse(mouse_x,mouse_y,lengthdir_x(impulse_distance,dir),lengthdir_y(impulse_distance,dir));
+            }
+        }
+    }
+} else
+if (/* ABILITY MAGNET */ false) {
+    if (mouse_check_button(mb_right)) {
+        with (obj_Pixel) {
+            if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {
+                var dir, impulse_distance;
+                dir = point_direction(mouse_x,mouse_y,x,y)+180;
+                impulse_distance = 20;
+                physics_apply_impulse(mouse_x,mouse_y,lengthdir_x(impulse_distance,dir),lengthdir_y(impulse_distance,dir));
+            }
         }
     }
 }

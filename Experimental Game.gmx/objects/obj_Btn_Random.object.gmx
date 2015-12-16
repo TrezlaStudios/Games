@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 0;
 
-Icon = spr_Icon_Stats;
+Icon = spr_Icon_Random;
 </string>
           </argument>
         </arguments>
@@ -53,10 +53,10 @@ Icon = spr_Icon_Stats;
             <string>if (instance_position(mouse_x, mouse_y, id)) {
     image_index = 1;
     if (mouse_check_button_pressed(mb_left)) {
-        if (!instance_exists(obj_GUI_Stats)) {
-            instance_create(0,0,obj_GUI_Stats);
+        if (!instance_exists(obj_GUI_Random)) {
+            instance_create(0, 0, obj_GUI_Random);
         } else {
-            with (obj_GUI_Stats) {
+            with (obj_GUI_Random) {
                 State = 1;
             }
         }
@@ -88,7 +88,7 @@ Icon = spr_Icon_Stats;
           <argument>
             <kind>1</kind>
             <string>draw_self();
-draw_sprite(Icon,instance_exists(obj_GUI_Stats),x+(sprite_width/2),y+(sprite_height/2));
+draw_sprite(Icon,instance_exists(obj_GUI_Random),x+(sprite_width/2),y+(sprite_height/2));
 </string>
           </argument>
         </arguments>

@@ -6,9 +6,13 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_Boundary</sprite>
-    <sprite>sprites\spr_Boundary_Centered</sprite>
-    <sprite>sprites\spr_Boundary_Corner</sprite>
+    <sprites name="Boundaries">
+      <sprite>sprites\spr_Boundary</sprite>
+      <sprite>sprites\spr_Boundary_Centered</sprite>
+      <sprite>sprites\spr_Boundary_Corner</sprite>
+      <sprite>sprites\spr_Boundary_Slope</sprite>
+      <sprite>sprites\spr_Boundary_Corner1</sprite>
+    </sprites>
     <sprite>sprites\spr_ButtonUpgr</sprite>
     <sprite>sprites\spr_Pixel_Glow</sprite>
     <sprite>sprites\spr_Pixel_C1</sprite>
@@ -32,6 +36,7 @@
       <sprite>sprites\spr_GUI_Main_Right</sprite>
       <sprites name="Icons">
         <sprite>sprites\spr_Icon_Stats</sprite>
+        <sprite>sprites\spr_Icon_Random</sprite>
       </sprites>
       <sprite>sprites\spr_GUI_BG</sprite>
     </sprites>
@@ -46,6 +51,7 @@
       <script>scripts\init_Pixels.gml</script>
       <script>scripts\init_Upgrades.gml</script>
       <script>scripts\init_Specialty_Pixels.gml</script>
+      <script>scripts\init_Random_Items.gml</script>
     </scripts>
     <scripts name="Data">
       <script>scripts\Data_Load.gml</script>
@@ -67,19 +73,23 @@
       <object>objects\obj_Boundary</object>
       <object>objects\obj_Boundary_Spinner</object>
       <object>objects\obj_Boundary_Corner</object>
+      <object>objects\obj_Boundary_Corner1</object>
+      <object>objects\obj_Boundary_Slope</object>
     </objects>
-    <object>objects\obj_GUI_Left</object>
-    <object>objects\obj_GUI_Right</object>
-    <object>objects\obj_Btn_Stats</object>
     <objects name="GUI">
+      <object>objects\obj_GUI_Left</object>
+      <object>objects\obj_GUI_Right</object>
       <object>objects\obj_GUI_Stats</object>
       <object>objects\obj_GUI_Stats_Pixel</object>
+      <object>objects\obj_GUI_Random</object>
     </objects>
+    <object>objects\obj_Btn_Stats</object>
+    <object>objects\obj_Btn_Random</object>
     <object>objects\obj_Anim_Pixel</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_Testing</room>
     <room>rooms\room_Game</room>
+    <room>rooms\room_Testing</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

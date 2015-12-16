@@ -31,7 +31,7 @@ for (var i=0; i&lt;array_height_2d(Pixel); i++) {
     Inst[i].ID = i;
 }
 
-Height = 40;
+Height = 70;
 State = 0;
 Scroll_X = 0;
 Clicked_X = -1;

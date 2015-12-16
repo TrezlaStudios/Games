@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>3</page>
-    <xoffset>-47</xoffset>
-    <yoffset>-85</yoffset>
+    <page>0</page>
+    <xoffset>239</xoffset>
+    <yoffset>1</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bg_Sky" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_Engine" x="32" y="32" name="inst_7FB58D92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Boundary_Corner" x="704" y="448" name="inst_01928E28" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Boundary_Corner" x="672" y="448" name="inst_01928E28" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Boundary_Corner" x="64" y="416" name="inst_A592F499" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Boundary_Corner" x="544" y="256" name="inst_82795DBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collect" x="0" y="512" name="inst_8F2A99E0" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
@@ -60,11 +60,18 @@
     <instance objName="obj_Boundary" x="-32" y="-32" name="inst_4F741B03" locked="0" code="" scaleX="26" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_Boundary" x="-32" y="32" name="inst_212CB5BA" locked="0" code="" scaleX="2" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="obj_Boundary" x="736" y="32" name="inst_970C2BF2" locked="0" code="" scaleX="2" scaleY="14" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Boundary" x="32" y="448" name="inst_7ACAA4CF" locked="0" code="" scaleX="20" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Boundary" x="32" y="448" name="inst_7ACAA4CF" locked="0" code="" scaleX="19" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Boundary" x="576" y="256" name="inst_56F42D2F" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_GUI_Left" x="336" y="0" name="inst_0B8BDEE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_GUI_Left" x="400" y="0" name="inst_3DE0846D" locked="0" code="" scaleX="-0.882352948188782" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Btn_Stats" x="336" y="0" name="inst_AB30E584" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_GUI_Left" x="304" y="0" name="inst_0B8BDEE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_GUI_Left" x="432" y="0" name="inst_3DE0846D" locked="0" code="" scaleX="-0.882352948188782" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Btn_Stats" x="304" y="0" name="inst_AB30E584" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Btn_Random" x="368" y="0" name="inst_8776D1C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Boundary_Corner" x="64" y="64" name="inst_7A410AE4" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Boundary_Corner" x="704" y="64" name="inst_2A86216D" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Boundary_Corner" x="704" y="320" name="inst_803F1942" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Boundary_Corner1" x="704" y="224" name="inst_716407F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Boundary_Slope" x="672" y="224" name="inst_0A0E8DB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Boundary_Slope" x="704" y="192" name="inst_02D06C07" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="90"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
