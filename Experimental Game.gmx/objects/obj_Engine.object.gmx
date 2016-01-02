@@ -51,16 +51,23 @@ init_Upgrades();
           <argument>
             <kind>1</kind>
             <string>/// Init Vars
-globalvar Pixel_Index;
+globalvar Pixel_Index, LMB_Ability, RMB_Ability;
 Pixel_Index = 0;
+LMB_Ability = -1;
+RMB_Ability = -1;
 
 // Temp Vars
+Selected_Pixel = noone;
 startX = mouse_x;
 startY = mouse_y;
 cnt = room_speed/8;
 
 // Loading Data
 Data_Load();
+
+/// Debug Vars
+globalvar DRAW_BOUNDARIES;
+DRAW_BOUNDARIES = false;
 </string>
           </argument>
         </arguments>
@@ -157,7 +164,8 @@ if (mouse_wheel_up()) {
             <kind>1</kind>
             <string>/// Abilities
 
-if (/* ABILITY PUSH */ true) {
+/* RETRACT */
+if (RMB_Ability = 0) {
     if (mouse_check_button(mb_right)) {
         with (obj_Pixel) {
             if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {
@@ -168,8 +176,10 @@ if (/* ABILITY PUSH */ true) {
             }
         }
     }
-} else
-if (/* ABILITY MAGNET */ false) {
+}
+
+/* MAGNET */
+if (RMB_Ability = 1) {
     if (mouse_check_button(mb_right)) {
         with (obj_Pixel) {
             if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {
@@ -238,14 +248,41 @@ if (instance_position(mouse_x,mouse_y,obj_Pixel)) {
     if (mouse_check_button_pressed(mb_left)) {
         startX = mouse_x;
         startY = mouse_y;
+        Selected_Pixel = instance_place(mouse_x, mouse_y, obj_Pixel);
     }
 }
 
 if (mouse_check_button_released(mb_left)) {
-    with (instance_place(mouse_x, mouse_y, obj_Pixel)) {
+    with (Selected_Pixel) {
         //phy_rotation = point_direction(startX, startY, mouse_x, mouse_y);
         physics_apply_local_impulse(startX-x, startY-y, mouse_x-x, mouse_y-y);
     }
+    Selected_Pixel = noone;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (mouse_check_button(mb_left)) {
+    draw_line_colour(startX,startY,mouse_x,mouse_y,c_red,c_red);
 }
 </string>
           </argument>

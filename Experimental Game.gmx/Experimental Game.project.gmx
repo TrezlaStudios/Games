@@ -13,17 +13,18 @@
       <sprite>sprites\spr_Boundary_Slope</sprite>
       <sprite>sprites\spr_Boundary_Corner1</sprite>
     </sprites>
-    <sprite>sprites\spr_ButtonUpgr</sprite>
-    <sprite>sprites\spr_Pixel_Glow</sprite>
-    <sprite>sprites\spr_Pixel_C1</sprite>
-    <sprite>sprites\spr_Pixel_C2</sprite>
-    <sprite>sprites\spr_Pixel_C3</sprite>
-    <sprite>sprites\spr_Pixel_C4</sprite>
-    <sprite>sprites\spr_Pixel_C5</sprite>
-    <sprite>sprites\spr_Pixel_C6</sprite>
-    <sprite>sprites\spr_Pixel_C7</sprite>
-    <sprite>sprites\spr_Pixel_C8</sprite>
     <sprites name="Pixels">
+      <sprites name="Misc">
+        <sprite>sprites\spr_Pixel_C1</sprite>
+        <sprite>sprites\spr_Pixel_C2</sprite>
+        <sprite>sprites\spr_Pixel_C3</sprite>
+        <sprite>sprites\spr_Pixel_C4</sprite>
+        <sprite>sprites\spr_Pixel_C5</sprite>
+        <sprite>sprites\spr_Pixel_C6</sprite>
+        <sprite>sprites\spr_Pixel_C7</sprite>
+        <sprite>sprites\spr_Pixel_C8</sprite>
+      </sprites>
+      <sprite>sprites\spr_Pixel_Glow</sprite>
       <sprite>sprites\spr_Pixel</sprite>
       <sprite>sprites\spr_Pixel_A1</sprite>
       <sprite>sprites\spr_Pixel_A2</sprite>
@@ -31,6 +32,7 @@
       <sprite>sprites\spr_Pixel_A4</sprite>
     </sprites>
     <sprites name="GUI">
+      <sprite>sprites\spr_GUI_BG</sprite>
       <sprite>sprites\spr_GUI_Main_Left</sprite>
       <sprite>sprites\spr_GUI_Main_Button</sprite>
       <sprite>sprites\spr_GUI_Main_Right</sprite>
@@ -38,17 +40,20 @@
         <sprite>sprites\spr_Icon_Stats</sprite>
         <sprite>sprites\spr_Icon_Random</sprite>
       </sprites>
-      <sprite>sprites\spr_GUI_BG</sprite>
     </sprites>
-    <sprite>sprites\sprite21</sprite>
+    <sprite>sprites\spr_ButtonUpgr</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_Sky</background>
+    <background>background\bg_Blue</background>
+    <background>background\bg_Dark</background>
+    <background>background\ts_1</background>
+    <background>background\ts_2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Init">
       <script>scripts\init_Pixels.gml</script>
+      <script>scripts\init_Abilities.gml</script>
       <script>scripts\init_Upgrades.gml</script>
       <script>scripts\init_Specialty_Pixels.gml</script>
       <script>scripts\init_Random_Items.gml</script>
