@@ -60,7 +60,7 @@ Icon = spr_Icon_Random;
                 State = 1;
             }
         }
-        Data_Save();
+        //Data_Save();
     }
 } else {
     image_index = 0;

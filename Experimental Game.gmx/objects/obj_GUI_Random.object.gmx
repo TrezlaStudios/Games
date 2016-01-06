@@ -34,6 +34,32 @@ Scroll_X_Move = 0;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Create Lucky Items
+for (var i=0; i&lt;array_height_2d(Lucky_Crate); i++) {
+    Inst[i] = instance_create(30+(130*i), y-Height, obj_GUI_Lucky_Crate);
+    Inst[i].ID = i;
+    Inst[i].image_blend = Lucky_Crate[i,1];
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="1" enumb="0">
       <action>
@@ -53,6 +79,9 @@ Scroll_X_Move = 0;
           <argument>
             <kind>1</kind>
             <string>/// Destroy Child Objects
+for (var i=0; i&lt;array_length_1d(Inst); i++) {
+    with (Inst[i]) instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -76,6 +105,10 @@ Scroll_X_Move = 0;
           <argument>
             <kind>1</kind>
             <string>/// Animation
+for (var i=0; i&lt;array_length_1d(Inst); i++) {
+    Inst[i].y = y - Height + 60;
+}
+
 if (State = 0) {
     if (y &lt; Height) {
         y += (Height-y)/6;
@@ -148,7 +181,30 @@ if (mouse_check_button(mb_left)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>draw_sprite_part(sprite_index, image_index, 0, 0, sprite_width, y, 0, 0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Don't Draw
 </string>
           </argument>
         </arguments>

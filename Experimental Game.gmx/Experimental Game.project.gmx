@@ -41,7 +41,17 @@
         <sprite>sprites\spr_Icon_Random</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_ButtonUpgr</sprite>
+    <sprites name="Lucky Items">
+      <sprites name="BG">
+        <sprite>sprites\spr_Lucky_Item_BG</sprite>
+        <sprite>sprites\spr_Lucky_Item_BG_Select</sprite>
+      </sprites>
+      <sprites name="Icons">
+        <sprite>sprites\spr_Lucky_Item_Icon_Common</sprite>
+        <sprite>sprites\spr_Lucky_Item_Icon_Uncommon</sprite>
+        <sprite>sprites\spr_Lucky_Item_Icon_Rare</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_Blue</background>
@@ -57,6 +67,7 @@
       <script>scripts\init_Upgrades.gml</script>
       <script>scripts\init_Specialty_Pixels.gml</script>
       <script>scripts\init_Random_Items.gml</script>
+      <script>scripts\init_Lucky_Crates.gml</script>
     </scripts>
     <scripts name="Data">
       <script>scripts\Data_Load.gml</script>
@@ -72,7 +83,6 @@
   <objects name="objects">
     <object>objects\obj_Engine</object>
     <object>objects\obj_Pixel</object>
-    <object>objects\obj_Pixel_Spawner</object>
     <object>objects\obj_Collect</object>
     <objects name="Boundaries">
       <object>objects\obj_Boundary</object>
@@ -87,10 +97,14 @@
       <object>objects\obj_GUI_Stats</object>
       <object>objects\obj_GUI_Stats_Pixel</object>
       <object>objects\obj_GUI_Random</object>
+      <object>objects\obj_GUI_Lucky_Crate</object>
     </objects>
     <object>objects\obj_Btn_Stats</object>
     <object>objects\obj_Btn_Random</object>
     <object>objects\obj_Anim_Pixel</object>
+    <objects name="Special Pixels">
+      <object>objects\obj_Pixel_Spawner</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_Game</room>

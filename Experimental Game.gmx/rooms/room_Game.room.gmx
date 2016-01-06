@@ -3,8 +3,8 @@
   <caption></caption>
   <width>768</width>
   <height>480</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>2</page>
-    <xoffset>-151</xoffset>
-    <yoffset>-118</yoffset>
+    <page>0</page>
+    <xoffset>38</xoffset>
+    <yoffset>-8</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bg_Dark" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
@@ -76,6 +76,7 @@
     <instance objName="obj_Boundary" x="736" y="32" name="inst_8AA7FDDD" locked="0" code="" scaleX="2" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="obj_Boundary_Corner" x="704" y="224" name="inst_855CC9B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Boundary_Corner" x="704" y="352" name="inst_785657E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_Pixel_Spawner" x="704" y="48" name="inst_ECBDBE5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_1" x="64" y="448" w="32" h="32" xo="0" yo="0" id="10000157" name="inst_851941A5" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

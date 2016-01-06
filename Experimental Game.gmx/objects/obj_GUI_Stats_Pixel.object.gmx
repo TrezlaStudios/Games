@@ -84,6 +84,7 @@ image_angle = 45;
 if (Pixel_Index = ID) {draw_sprite_ext(spr_Pixel_Glow,0,x,y,2,2,45,Pixel[ID,0],1);} // Glow
 draw_sprite_ext(Pixel[ID,2],0,x,y+2,2,2,45,c_black,0.3); // Shadow
 draw_sprite_ext(Pixel[ID,2],0,x,y,2,2,45,Pixel[ID,0],1); // Main Sprite
+draw_set_halign(fa_left);
 draw_text_colour(x+8,y+2,"x"+string(Pixel[ID,1]),c_black,c_black,c_black,c_black,0.3); // Text
 draw_text_colour(x+8,y,"x"+string(Pixel[ID,1]),Pixel[ID,0],Pixel[ID,0],Pixel[ID,0],Pixel[ID,0],1); // Text
 </string>
