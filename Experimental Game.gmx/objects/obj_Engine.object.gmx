@@ -31,6 +31,7 @@ init_Pixels();
 init_Specialty_Pixels();
 init_Upgrades();
 init_Lucky_Crates();
+init_Abilities();
 </string>
           </argument>
         </arguments>
@@ -52,11 +53,9 @@ init_Lucky_Crates();
           <argument>
             <kind>1</kind>
             <string>/// Init Vars
-globalvar Pixel_Index, Pixel_Focus, LMB_Ability, RMB_Ability;
+globalvar Pixel_Index, Pixel_Focus;
 Pixel_Index = 0;
 Pixel_Focus = noone;
-LMB_Ability = -1;
-RMB_Ability = -1;
 
 // Temp Vars
 Selected_Pixel = noone;
@@ -173,7 +172,7 @@ if (mouse_wheel_up()) {
             <string>/// Abilities
 
 /* RETRACT */
-if (RMB_Ability = 0) {
+if (Ability[0,1]) {
     if (mouse_check_button(mb_right)) {
         with (obj_Pixel) {
             if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {
@@ -187,7 +186,7 @@ if (RMB_Ability = 0) {
 }
 
 /* MAGNET */
-if (RMB_Ability = 1) {
+if (Ability[1,1]) {
     if (mouse_check_button(mb_right)) {
         with (obj_Pixel) {
             if (point_distance(x,y,mouse_x,mouse_y) &lt; 100) {

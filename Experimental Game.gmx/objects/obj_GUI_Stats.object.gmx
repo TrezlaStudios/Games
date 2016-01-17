@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Create Pixel GUI
 for (var i=0; i&lt;array_height_2d(Pixel); i++) {
-    Inst[i] = instance_create(x+30+(70*i),y-30,obj_GUI_Stats_Pixel);
+    Inst[i] = instance_create(x+30+(100*i),y-30,obj_GUI_Stats_Pixel);
     Inst[i].ID = i;
 }
 
@@ -86,7 +86,7 @@ for (var i=0; i&lt;array_length_1d(Inst); i++) {
             <kind>1</kind>
             <string>/// Set Position For GUI
 for (var i=0; i&lt;array_height_2d(Pixel); i++) {
-    Inst[i].x = x+Scroll_X+30+(70*i);
+    Inst[i].x = x+Scroll_X+30+(100*i);
     Inst[i].y = y-20;
 }
 
@@ -162,7 +162,14 @@ if (mouse_check_button(mb_left)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_part(sprite_index, image_index, 0, 0, sprite_width, y, 0, 0);
+            <string>// Dim Background
+draw_set_alpha(0.7/Height*y);
+draw_set_colour(c_black);
+draw_rectangle(0,0,room_width,room_height,false);
+draw_set_alpha(1);
+
+// Draw GUI BG
+draw_sprite_part(sprite_index, image_index, 0, 0, sprite_width, y, 0, 0);
 </string>
           </argument>
         </arguments>

@@ -45,6 +45,7 @@
       <sprites name="BG">
         <sprite>sprites\spr_Lucky_Item_BG</sprite>
         <sprite>sprites\spr_Lucky_Item_BG_Select</sprite>
+        <sprite>sprites\spr_Lucky_Item_Desc_BG</sprite>
       </sprites>
       <sprites name="Icons">
         <sprite>sprites\spr_Lucky_Item_Icon_Common</sprite>
@@ -81,9 +82,11 @@
     <font>fonts\font_Default</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_Engine</object>
-    <object>objects\obj_Pixel</object>
-    <object>objects\obj_Collect</object>
+    <objects name="Main">
+      <object>objects\obj_Engine</object>
+      <object>objects\obj_Pixel</object>
+      <object>objects\obj_Collect</object>
+    </objects>
     <objects name="Boundaries">
       <object>objects\obj_Boundary</object>
       <object>objects\obj_Boundary_Spinner</object>
@@ -98,12 +101,17 @@
       <object>objects\obj_GUI_Stats_Pixel</object>
       <object>objects\obj_GUI_Random</object>
       <object>objects\obj_GUI_Lucky_Crate</object>
+      <object>objects\obj_GUI_Lucky_Crate_Desc</object>
     </objects>
-    <object>objects\obj_Btn_Stats</object>
-    <object>objects\obj_Btn_Random</object>
-    <object>objects\obj_Anim_Pixel</object>
     <objects name="Special Pixels">
       <object>objects\obj_Pixel_Spawner</object>
+    </objects>
+    <objects name="Buttons">
+      <object>objects\obj_Btn_Stats</object>
+      <object>objects\obj_Btn_Random</object>
+    </objects>
+    <objects name="Misc">
+      <object>objects\obj_Anim_Pixel</object>
     </objects>
   </objects>
   <rooms name="rooms">
